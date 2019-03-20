@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="dynamics_integrate.act_job_runner" model="ir.actions.act_window">
+      <field name="auto_search" eval="True"/>
+      <field name="binding_model_id" eval="False"/>
+      <field name="binding_type">action</field>
+      <field name="context">{}</field>
+      <field name="domain" eval="False"/>
+      <field name="filter" eval="False"/>
+      <field name="groups_id" eval="[(6, 0, [])]"/>
+      <field name="help">
+        <![CDATA[<p>
+                        No data to display.
+                    </p>
+                ]]>
+      </field>
+      <field name="limit">80</field>
+      <field name="multi" eval="False"/>
+      <field name="name">Job Runner</field>
+      <field name="res_model">dynamics_integrate.job_runner</field>
+      <field name="search_view_id" eval="False"/>
+      <field name="src_model" eval="False"/>
+      <field name="target">current</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="usage" eval="False"/>
+      <field name="view_id" eval="False"/>
+      <field name="view_mode">tree,form</field>
+      <field name="view_type">form</field>
+    </record>
+
+    <record id="dynamics_integrate.root_menu" model="ir.ui.menu">
+      <field name="action" eval="False"/>
+      <field name="active" eval="True"/>
+      <field name="groups_id" eval="[(6, 0, [])]"/>
+      <field name="name">dynamics integrate</field>
+      <field name="parent_id" eval="False"/>
+      <field name="sequence">10</field>
+      <field name="web_icon">fa fa-retweet,#EB5A46,#34495e</field>
+    </record>
+    
+    <record id="dynamics_integrate.top_menu_job_runner" model="ir.ui.menu">
+      <field name="action" ref="dynamics_integrate.act_job_runner"/>
+      <field name="active" eval="True"/>
+      <field name="groups_id" eval="[(6, 0, [])]"/>
+      <field name="name">Job Runner</field>
+      <field name="parent_id" ref="dynamics_integrate.root_menu"/>
+      <field name="sequence">30</field>
+      <field name="web_icon" eval="False"/>
+    </record>
+    
+    <record id="dynamics_integrate.job_runner_view_form" model="ir.ui.view">
+      <field name="name">Job Runner Form</field>
+      <field name="model">dynamics_integrate.job_runner</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="name"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record id="dynamics_integrate.job_runner_view_tree" model="ir.ui.view">
+      <field name="name">Job Runner List</field>
+      <field name="model">dynamics_integrate.job_runner</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="dynamics_integrate.srv_run_job" model="ir.actions.server">
+      <field eval="False" name="binding_model_id"/>
+      <field name="binding_type">action</field>
+      <field eval="[(6, 0, [])]" name="child_ids"/>
+      <field eval="False" name="crud_model_id"/>
+      <field eval="False" name="help"/>
+      <field eval="False" name="link_field_id"/>
+      <field name="name">Job agreements</field>
+      <field name="model_id" ref="model_dynamics_integrate_job_runner"/>
+      <field name="state">code</field>
+      <field name="sequence">5</field>
+      <field name="code">
+        <![CDATA[ action = model.processAgreements(env, model, record, records, datetime, dateutil, log)]]>
+      </field>
+    </record>
+
+    <record model="base.automation" id="dynamics_integrate.srv_run_job_base">
+      <field name="action_server_id" ref="dynamics_integrate.srv_run_job"/>
+      <field eval="True" name="active"/>
+      <field eval="False" name="filter_domain"/>
+      <field eval="False" name="filter_pre_domain"/>
+      <field eval="False" name="last_run"/>
+      <field eval="False" name="on_change_fields"/>
+      <field eval="False" name="trg_date_id"/>
+      <field eval="False" name="trg_date_range"/>
+      <field eval="False" name="trg_date_range_type"/>
+      <field name="trigger">on_create_or_write</field>
+    </record>
+  </data>
+</odoo>
