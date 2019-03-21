@@ -9,6 +9,7 @@ from requests.auth import HTTPDigestAuth
 
 class JobRunner(models.Model):
     _name = 'tcrm_dynamics_integrate.job_runner'
+    _description = 'Test'
 
     name = fields.Char('Name', required=False)
     
