@@ -8,7 +8,7 @@ from requests.auth import HTTPBasicAuth
 from requests.auth import HTTPDigestAuth
 
 class JobRunner(models.Model):
-    _name = 'dynamics_integrate.job_runner'
+    _name = 'tcrm_dynamics_integrate.job_runner'
 
     name = fields.Char('Name', required=False)
     
