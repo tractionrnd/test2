@@ -23,7 +23,7 @@
 	    'views/job_runner.xml',
       'views/ext_mail_message_actions.xml'
       'security/ir.model.access.csv'
-    ]#,
+    ],
     #'qweb': [
     #    'views/chatter.xml'
     #],
