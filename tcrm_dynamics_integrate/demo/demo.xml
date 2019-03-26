@@ -1,0 +1,11 @@
+<odoo>
+  <data>
+  
+    <record id="dynamics_alias" model="mail.alias">
+      <field name="alias_name">dynamics</field>
+      <field name="alias_model_id" ref="model_tcrm_dynamics_integrate_dynamics"/>
+      <field name="alias_user_id" ref="base.user_admin"/>
+    </record>
+
+  </data>
+</odoo>

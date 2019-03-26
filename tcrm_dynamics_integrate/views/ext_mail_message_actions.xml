@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Start: Action to process email content -->
+  <record id="tcrm_dynamics_integrate.srv_process_dynamics_email" model="ir.actions.server">
+    <field eval="False" name="binding_model_id"/>
+    <field name="binding_type">action</field>
+    <field eval="[(6, 0, [])]" name="child_ids"/>
+    <field eval="False" name="crud_model_id"/>
+    <field eval="False" name="help"/>
+    <field eval="False" name="link_field_id"/>
+    <field name="name">Process TCG Dynamics Email</field>
+    <field name="model_id" ref="model_mail_message"/>
+    <field name="state">code</field>
+    <field name="sequence">5</field>
+    <field name="code">
+      <![CDATA[ action = model.process_tcg_dynamics_email(env, model, record, log) ]]>
+    </field>
+  </record>
+  <record model="base.automation" id="tcrm_dynamics_integrate.srv_process_dynamics_email_base">
+    <field name="action_server_id" ref="tcrm_dynamics_integrate.srv_process_dynamics_email"/>
+    <field eval="True" name="active"/>
+    <field eval="False" name="filter_domain"/>
+    <field eval="False" name="filter_pre_domain"/>
+    <field eval="False" name="last_run"/>
+    <field eval="False" name="on_change_fields"/>
+    <field eval="False" name="trg_date_id"/>
+    <field eval="False" name="trg_date_range"/>
+    <field eval="False" name="trg_date_range_type"/>
+    <field name="trigger">on_create</field>
+  </record>
+  <!-- End: Action to process email content -->
+</odoo>

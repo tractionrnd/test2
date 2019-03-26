@@ -13,7 +13,7 @@
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.37',
+    'version': '0.39',
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'contacts', 'base_automation', 'crm'],
@@ -21,13 +21,14 @@
     # always loaded
     'data': [
 	    'views/job_runner.xml',
+      'views/ext_mail_message_actions.xml'
       'security/ir.model.access.csv'
     ]#,
     #'qweb': [
     #    'views/chatter.xml'
     #],
     # only loaded in demonstration mode
-    #'demo': [
-    #    'demo/demo.xml',
-    #]
+    'demo': [
+        'demo/demo.xml',
+    ]
 }
