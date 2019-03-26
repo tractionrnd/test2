@@ -21,7 +21,7 @@
     # always loaded
     'data': [
 	    'views/job_runner.xml',
-      'views/ext_mail_message_actions.xml'
+      'views/ext_mail_message_actions.xml',
       'security/ir.model.access.csv'
     ],
     #'qweb': [
