@@ -2,8 +2,8 @@
 from odoo import models, fields, api
 
 class ExtCRMLead(models.Model):
-	_inherit = 'sale.order'
-    
+    _inherit = 'sale.order'
+
     @api.multi
     def generate_po_from_so(self):
         test = None
