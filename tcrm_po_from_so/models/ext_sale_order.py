@@ -21,7 +21,7 @@ class ExtCRMLead(models.Model):
                 'order_id': poItem.id,
                 'product_id': line_item.product_id.id,
                 'product_qty': line_item.product_uom_qty,
-                'product_uom': line_item.product_uom,
+                'product_uom': line_item.product_uom.id,
                 'date_planned': line_item.create_date
             })
 
