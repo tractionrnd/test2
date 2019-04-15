@@ -10,7 +10,7 @@ class ExtCRMLead(models.Model):
 
         poItem = poModel.create({
             'date_order': self.confirmation_date,
-            'partner_id': self.partner_id
+            'partner_id': self.partner_id.id
         })
 
         #order_line
