@@ -19,7 +19,7 @@ class ExtCRMLead(models.Model):
         for line_item in self.order_line:
             poLineModel.create({
                 'order_id': poItem.id,
-                'product_id': line_item.product_id,
+                'product_id': line_item.product_id.id,
                 'product_qty': line_item.product_uom_qty,
                 'product_uom': line_item.product_uom,
                 'date_planned': line_item.create_date
