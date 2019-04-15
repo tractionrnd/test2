@@ -15,16 +15,17 @@ class ExtCRMLead(models.Model):
 
         #order_line
         #order_line
-        #poLineModel = self.env['purchase.order.line']
-        #for line_item in self.order_line:
-        #    poLineModel.create({
-        #        'order_id': poItem.id,
-        #        'product_id': line_item.product_id.id,
-        #        'product_qty': line_item.product_uom_qty,
-        #        'product_uom': line_item.product_uom.id,
-        #        'date_planned': line_item.create_date,
-        #        'name': 'New'
-        #    })
+        poLineModel = self.env['purchase.order.line']
+        for line_item in self.order_line:
+            poLineModel.create({
+                'order_id': poItem.id,
+                'product_id': line_item.product_id.id,
+                'product_qty': line_item.product_uom_qty,
+                'product_uom': line_item.product_uom.id,
+                'date_planned': line_item.create_date,
+                'name': 'New',
+                'price_unit': line_item.price_unit
+            })
 
         return {
             'view_type': 'form',
