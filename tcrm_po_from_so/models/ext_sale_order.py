@@ -17,7 +17,7 @@ class ExtCRMLead(models.Model):
         #order_line
         poLineModel = self.env['purchase.order.line']
         for line_item in self.order_line:
-            poLineModel.cereate({
+            poLineModel.create({
                 'order_id': poItem.id,
                 'product_id': line_item.product_id,
                 'product_qty': line_item.product_uom_qty,
