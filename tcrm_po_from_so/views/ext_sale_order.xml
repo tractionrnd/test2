@@ -21,7 +21,7 @@
             PO will be created in RFQ status.
           </p>
           <group>
-            <field name="partner_id" class="oe_inline" domain="[('supplier','='',True)]"/>
+            <field name="partner_id" class="oe_inline" domain="[('supplier','=',True)]"/>
           </group>
           <footer>
             <button name="generate_po" string="Generate PO" type="object" class="btn-primary"/>
