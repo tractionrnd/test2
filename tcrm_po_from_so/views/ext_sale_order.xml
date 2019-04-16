@@ -2,15 +2,43 @@
 <odoo>
   <data>
     <record id="tcrm_po_from_so_view_form" model="ir.ui.view">
-        <field name="name">sale.order.form</field>
-        <field name="model">sale.order</field>
-        <field name="inherit_id" ref="sale.view_order_form"/>
-        <field name="arch" type="xml">
-            <xpath expr="//button[@name='action_quotation_send']" position="after">
-                <button name="generate_po_from_so" string="Generate PO"
-                    type="object" class="btn-primary"/>
-            </xpath>
-        </field>
+      <field name="name">sale.order.form</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//button[@name='action_quotation_send']" position="after">
+          <button name="tcrm_po_from_so_view_form_generate_po_action" string="Generate PO" type="action" class="btn-primary"/>
+        </xpath>
+      </field>
+    </record>
+
+    <record id="tcrm_po_from_so_generate_po_from_so_form" model="ir.ui.view">
+      <field name="name">Generate PO</field>
+      <field name="model">tcrm_po_from_so.purchase_order_adv</field>
+      <field name="arch" type="xml">
+        <form string="Invoice Sales Order">
+          <p class="oe_grey">
+            PO will be created in RFQ status.
+          </p>
+          <group>
+            <field name="partner_id" class="oe_inline" />
+          </group>
+          <footer>
+            <button name="generate_po" string="Generate PO" type="object" class="btn-primary"/>
+            <button string="Cancel" class="btn-secondary" special="cancel"/>
+          </footer>
+        </form>
+      </field>
+    </record>
+
+    <record id="action_tcrm_po_from_so_generate_po_from_so_form" model="ir.actions.act_window">
+      <field name="name">Generate PO</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">tcrm_po_from_so.purchase_order_adv</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">form</field>
+      <field name="target">new</field>
+      <field name="binding_model_id" ref="tcrm_po_from_so.model_purchase_order_adv" />
     </record>
   </data>
 </odoo>
