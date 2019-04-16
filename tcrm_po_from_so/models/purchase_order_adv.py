@@ -32,7 +32,7 @@ class PurchaseOrderAdv(models.TransientModel):
                 'product_uom': line_item.product_uom.id,
                 'date_planned': line_item.create_date,
                 'name': line_item.name,
-                'price_unit': line_item.price_unit
+                'price_unit': line_item.purchase_price
             })
 
         return {
