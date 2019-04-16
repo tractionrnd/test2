@@ -15,5 +15,4 @@ class PurchaseOrderAdv(models.TransientModel):
     def generate_po(self):
         dff = None
         sale_orders = self.env['sale.order'].browse(self._context.get('active_ids', []))
-
-         raise ValidationError("Error: %s" % sale_orders)
+        raise ValidationError("Error: %s" % sale_orders)
