@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Dynamics - ODOO integration",
+    'name': "Traction - Dynamics integration",
 
     'summary': "",
 
@@ -13,7 +13,7 @@
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.39',
+    'version': '0.40',
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'contacts', 'base_automation', 'crm'],
