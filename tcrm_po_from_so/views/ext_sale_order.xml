@@ -12,7 +12,7 @@
       </field>
     </record>
 
-    <record id="tcrm_po_from_so_generate_po_from_so_form" model="ir.ui.view">
+    <record id="tcrm_po_from.so_generate_po_from_so_form" model="ir.ui.view">
       <field name="name">Generate PO</field>
       <field name="model">tcrm_po_from_so.purchase_order_adv</field>
       <field name="arch" type="xml">
@@ -38,7 +38,7 @@
       <field name="view_type">form</field>
       <field name="view_mode">form</field>
       <field name="target">new</field>
-      <field name="binding_model_id" ref="tcrm_po_from_so_generate_po_from_so_form" />
+      <field name="binding_model_id" ref="so_generate_po_from_so_form" />
     </record>
   </data>
 </odoo>
