@@ -7,7 +7,7 @@ from odoo.exceptions import ValidationError
 
 class PurchaseOrderAdv(models.TransientModel):
     _name = "tcrm_po_from_so.purchase_order_adv"
-    _description = ""
+    _description = "Generate PO from SO"
 
     partner_id = fields.Many2one('res.partner', string='Customer', required=True, help="You can find a customer by its Name, TIN, Email or Internal Reference.")
     

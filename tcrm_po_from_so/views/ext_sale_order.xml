@@ -7,7 +7,7 @@
       <field name="inherit_id" ref="sale.view_order_form"/>
       <field name="arch" type="xml">
         <xpath expr="//button[@name='action_quotation_send']" position="after">
-          <button name="generate_po_from_so_form_action" string="Generate PO" type="action" class="btn-primary"/>
+          <button name="tcrm_po_from_so.generate_po_from_so_form_action" string="Generate PO" type="action" class="btn-primary"/>
         </xpath>
       </field>
     </record>
