@@ -21,7 +21,7 @@ class PurchaseOrderAdv(models.TransientModel):
         sale = sale_orders[0]
         poItem = poModel.create({
             'date_order': sale.confirmation_date,
-            'partner_id': sale.partner_id.id
+            'partner_id': self.partner_id.id
         })
 
         for line_item in sale.order_line:
