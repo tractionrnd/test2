@@ -38,7 +38,7 @@
       <field name="view_type">form</field>
       <field name="view_mode">form</field>
       <field name="target">new</field>
-      <field name="binding_model_id" ref="tcrm_po_from_so.model_purchase_order_adv" />
+      <field name="binding_model_id" ref="tcrm_po_from_so_generate_po_from_so_form" />
     </record>
   </data>
 </odoo>
