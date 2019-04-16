@@ -13,6 +13,32 @@ class PurchaseOrderAdv(models.TransientModel):
     
     @api.multi
     def generate_po(self):
-        dff = None
         sale_orders = self.env['sale.order'].browse(self._context.get('active_ids', []))
-        raise ValidationError("Error: %s" % sale_orders)
+        
+        poModel = self.env['purchase.order']
+        poLineModel = self.env['purchase.order.line']
+
+        sale = sale_orders[0]
+        poItem = poModel.create({
+            'date_order': sale.confirmation_date,
+            'partner_id': sale.partner_id.id
+        })
+
+        for line_item in sale.order_line:
+            poLineModel.create({
+                'order_id': poItem.id,
+                'product_id': line_item.product_id.id,
+                'product_qty': line_item.product_uom_qty,
+                'product_uom': line_item.product_uom.id,
+                'date_planned': line_item.create_date,
+                'name': line_item.name,
+                'price_unit': line_item.price_unit
+            })
+
+        return {
+            'view_type': 'form',
+            'view_mode': 'form',
+            'res_model': 'purchase.order',
+            'target': 'current',
+            'res_id': poItem.id,
+            'type': 'ir.actions.act_window' }
