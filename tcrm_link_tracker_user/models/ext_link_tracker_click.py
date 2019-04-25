@@ -12,19 +12,40 @@ class ExtLinkTrackerClick(models.Model):
         string=u'User Email',
     )
 
-    def _get_click_values_from_route(self, route_values):
-        data = super(ExtLinkTrackerClick, self)._get_click_values_from_route(route_values)
+    @api.model
+    def add_click(self, code, ip, country_code, stat_id=False):
 
         uname = 'no'
         uemail = 'nono'
         if self.env.user:
             uname = self.env.user.name
-        if self.env.user:
             uemail = self.env.user.email
 
+        self = self.sudo()
+        code_rec = self.env['link.tracker.code'].search([('code', '=', code)])
+
+        if not code_rec:
+            return None
+
+        again = self.search_count([('link_id', '=', code_rec.link_id.id), ('ip', '=', ip)])
+
+        if not again:
+            self.create(
+                self._get_click_values_from_route(dict(
+                    code=code,
+                    ip=ip,
+                    country_code=country_code,
+                    stat_id=stat_id,
+                    uname=uname,
+                    uemail=uemail,
+                )))
+
+    def _get_click_values_from_route(self, route_values):
+        data = super(ExtLinkTrackerClick, self)._get_click_values_from_route(route_values)
+
         data.update({
-            'x_user_name': uname,
-            'x_user_email': uemail
+            'x_user_name': route_values['uname'],
+            'x_user_email': route_values['uemail']
         })
 
         return data
