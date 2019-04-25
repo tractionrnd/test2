@@ -23,8 +23,8 @@ class ExtLinkTrackerClick(models.Model):
         again = self.search_count([('link_id', '=', code_rec.link_id.id), ('ip', '=', ip)])
 
         if not again:
-            uname = ''
-            uemail = ''
+            uname = 'no'
+            uemail = 'nono'
             if self.env.user:
                 uname = self.env.user.name
             if self.env.user:
