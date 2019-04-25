@@ -25,10 +25,10 @@ class ExtLinkTrackerClick(models.Model):
         if not again:
             uname = ''
             uemail = ''
-            if self._uid:
-                uname = 'TEST'
-            if self._uid:
-                uemail = 'EMAIL'
+            if self.env.user:
+                uname = self.env.user.name
+            if self.env.user:
+                uemail = self.env.user.email
 
             data = dict(
                     code=code,
