@@ -23,13 +23,20 @@ class ExtLinkTrackerClick(models.Model):
         again = self.search_count([('link_id', '=', code_rec.link_id.id), ('ip', '=', ip)])
 
         if not again:
+            uname = ''
+            uemail = ''
+            if self._uid:
+                uname = 'TEST'
+            if self._uid:
+                uemail = 'EMAIL'
+
             data = dict(
                     code=code,
                     ip=ip,
                     country_code=country_code,
                     stat_id=stat_id,
-                    x_user_name=self._uid.name or '',
-                    x_user_email=self._uid.email or ''
+                    x_user_name=uname,
+                    x_user_email=uemail,
                 )
             self.create(
                 super(ExtLinkTrackerClick, self)._get_click_values_from_route(data))
