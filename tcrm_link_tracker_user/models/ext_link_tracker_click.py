@@ -28,8 +28,8 @@ class ExtLinkTrackerClick(models.Model):
                     ip=ip,
                     country_code=country_code,
                     stat_id=stat_id,
-                    x_user_name = self._uid.name or '',
-                    x_user_email = self._uid.email or ''
+                    x_user_name=self._uid.name or '',
+                    x_user_email=self._uid.email or ''
                 )
             self.create(
                 super(ExtLinkTrackerClick, self)._get_click_values_from_route(data))
