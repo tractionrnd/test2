@@ -22,8 +22,8 @@ class ExtLinkTrackerClick(models.Model):
             uemail = self.env.user.email
 
         data.update({
-            'x_user_name': route_values['uname'],
-            'x_user_email': route_values['uemail']
+            'x_user_name': uname, #route_values['uname'],
+            'x_user_email': uemail #route_values['uemail']
         })
 
         return data
