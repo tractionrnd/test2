@@ -13,7 +13,7 @@ class ExtLinkTrackerClick(models.Model):
     )
 
     @api.model
-    def add_click(self, code, ip, country_code, stat_id=False, uid):
+    def add_click(self, code, ip, country_code, uid, stat_id=False):
         self = self.sudo()
         code_rec = self.env['link.tracker.code'].search([('code', '=', code)])
 
