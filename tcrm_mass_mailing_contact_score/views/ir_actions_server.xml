@@ -26,7 +26,7 @@ model.add_score(env, model, record, log, 1)
     <field name="help" eval="False"/>
     <field name="link_field_id" eval="False"/>
     <field name="model_id" ref="model_mail_mass_mailing_contact"/>
-    <field name="name">+1 to Score</field>
+    <field name="name">+001 to Score</field>
     <field name="sequence">5</field>
     <field name="state">code</field>
   </record>
@@ -41,7 +41,7 @@ model.add_score(env, model, record, log, 5)
     <field name="help" eval="False"/>
     <field name="link_field_id" eval="False"/>
     <field name="model_id" ref="model_mail_mass_mailing_contact"/>
-    <field name="name">+5 to Score</field>
+    <field name="name">+005 to Score</field>
     <field name="sequence">5</field>
     <field name="state">code</field>
   </record>
@@ -56,7 +56,7 @@ model.add_score(env, model, record, log, 10)
     <field name="help" eval="False"/>
     <field name="link_field_id" eval="False"/>
     <field name="model_id" ref="model_mail_mass_mailing_contact"/>
-    <field name="name">+10 to Score</field>
+    <field name="name">+010 to Score</field>
     <field name="sequence">5</field>
     <field name="state">code</field>
   </record>
@@ -71,7 +71,7 @@ model.add_score(env, model, record, log, 50)
     <field name="help" eval="False"/>
     <field name="link_field_id" eval="False"/>
     <field name="model_id" ref="model_mail_mass_mailing_contact"/>
-    <field name="name">+50 to Score</field>
+    <field name="name">+050 to Score</field>
     <field name="sequence">5</field>
     <field name="state">code</field>
   </record>
@@ -102,7 +102,7 @@ model.add_score(env, model, record, log, -1)
     <field name="help" eval="False"/>
     <field name="link_field_id" eval="False"/>
     <field name="model_id" ref="model_mail_mass_mailing_contact"/>
-    <field name="name">-1 to Score</field>
+    <field name="name">-001 to Score</field>
     <field name="sequence">5</field>
     <field name="state">code</field>
   </record>
@@ -117,7 +117,7 @@ model.add_score(env, model, record, log, -5)
     <field name="help" eval="False"/>
     <field name="link_field_id" eval="False"/>
     <field name="model_id" ref="model_mail_mass_mailing_contact"/>
-    <field name="name">-5 to Score</field>
+    <field name="name">-005 to Score</field>
     <field name="sequence">5</field>
     <field name="state">code</field>
   </record>
@@ -132,7 +132,7 @@ model.add_score(env, model, record, log, -10)
     <field name="help" eval="False"/>
     <field name="link_field_id" eval="False"/>
     <field name="model_id" ref="model_mail_mass_mailing_contact"/>
-    <field name="name">-10 to Score</field>
+    <field name="name">-010 to Score</field>
     <field name="sequence">5</field>
     <field name="state">code</field>
   </record>
@@ -147,7 +147,7 @@ model.add_score(env, model, record, log, -50)
     <field name="help" eval="False"/>
     <field name="link_field_id" eval="False"/>
     <field name="model_id" ref="model_mail_mass_mailing_contact"/>
-    <field name="name">-50 to Score</field>
+    <field name="name">-050 to Score</field>
     <field name="sequence">5</field>
     <field name="state">code</field>
   </record>
