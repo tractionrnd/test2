@@ -13,15 +13,15 @@
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.2',
+    'version': '0.6',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'mass_mailing']#,
+    'depends': ['base', 'mass_mailing', 'base_automation', 'marketing_automation'],
 
     # always loaded
-    #'data': [
-    #    'views/ext_sale_order.xml'
-    #]#,
+    'data': [
+        'views/ir_actions_server.xml'
+    ]
     # only loaded in demonstration mode
     #'demo': [
     #    'demo/demo.xml',
