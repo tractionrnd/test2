@@ -13,7 +13,7 @@
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
     # for the full list
     'category': 'Uncategorized',
-    'version': '0.8',
+    'version': '0.9',
 
     # any module necessary for this one to work correctly
     'depends': ['base', 'sale_management', 'stock', 'delivery'],
@@ -21,7 +21,8 @@
     # always loaded
     'data': [
         'views/ext_ext_stock_picking.xml',
-        'views/ext_stock_quant_package.xml'
+        'views/ext_stock_quant_package.xml',
+        'views/ext_res_config_settings.xml'
     ]#,
     # only loaded in demonstration mode
     #'demo': [
