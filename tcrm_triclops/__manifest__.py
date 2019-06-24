@@ -20,7 +20,8 @@
 
     # always loaded
     'data': [
-        'views/ext_ext_stock_picking.xml'
+        'views/ext_ext_stock_picking.xml',
+        'views/ext_stock_quant_package.xml'
     ]#,
     # only loaded in demonstration mode
     #'demo': [
