@@ -9,8 +9,8 @@ class ExtStockQuantPackage(models.Model):
         #self.packaging_id = 
         #self.weight = 10
         #self.shipping_weight = 10
-
-        self.write({
-            weight: 10,
-            shipping_weight: 10
-        })
+        for record in self:
+            record.write({
+                weight: 10,
+                shipping_weight: 10
+            })
