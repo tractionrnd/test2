@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="tcrm_mass_mailing_contact_score.set_score_to_0" model="ir.actions.server">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="child_ids" eval="[(6, 0, [])]"/>
+    <field name="code"><![CDATA[# Available variables:
+model.set_score(env, model, record, log, 0) 
+]]>    </field>
+    <field name="crud_model_id" eval="False"/>
+    <field name="help" eval="False"/>
+    <field name="link_field_id" eval="False"/>
+    <field name="model_id" ref="model_mail_mass_mailing_contact"/>
+    <field name="name">Set Score to 0</field>
+    <field name="sequence">5</field>
+    <field name="state">code</field>
+  </record>
+  <record id="tcrm_mass_mailing_contact_score.add_to_score_1" model="ir.actions.server">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="child_ids" eval="[(6, 0, [])]"/>
+    <field name="code"><![CDATA[# Available variables:
+model.add_score(env, model, record, log, 1) 
+]]>    </field>
+    <field name="crud_model_id" eval="False"/>
+    <field name="help" eval="False"/>
+    <field name="link_field_id" eval="False"/>
+    <field name="model_id" ref="model_mail_mass_mailing_contact"/>
+    <field name="name">+001 to Score</field>
+    <field name="sequence">5</field>
+    <field name="state">code</field>
+  </record>
+  <record id="tcrm_mass_mailing_contact_score.add_to_score_5" model="ir.actions.server">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="child_ids" eval="[(6, 0, [])]"/>
+    <field name="code"><![CDATA[# Available variables:
+model.add_score(env, model, record, log, 5) 
+]]>    </field>
+    <field name="crud_model_id" eval="False"/>
+    <field name="help" eval="False"/>
+    <field name="link_field_id" eval="False"/>
+    <field name="model_id" ref="model_mail_mass_mailing_contact"/>
+    <field name="name">+005 to Score</field>
+    <field name="sequence">5</field>
+    <field name="state">code</field>
+  </record>
+  <record id="tcrm_mass_mailing_contact_score.add_to_score_10" model="ir.actions.server">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="child_ids" eval="[(6, 0, [])]"/>
+    <field name="code"><![CDATA[# Available variables:
+model.add_score(env, model, record, log, 10) 
+]]>    </field>
+    <field name="crud_model_id" eval="False"/>
+    <field name="help" eval="False"/>
+    <field name="link_field_id" eval="False"/>
+    <field name="model_id" ref="model_mail_mass_mailing_contact"/>
+    <field name="name">+010 to Score</field>
+    <field name="sequence">5</field>
+    <field name="state">code</field>
+  </record>
+  <record id="tcrm_mass_mailing_contact_score.add_to_score_50" model="ir.actions.server">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="child_ids" eval="[(6, 0, [])]"/>
+    <field name="code"><![CDATA[# Available variables:
+model.add_score(env, model, record, log, 50) 
+]]>    </field>
+    <field name="crud_model_id" eval="False"/>
+    <field name="help" eval="False"/>
+    <field name="link_field_id" eval="False"/>
+    <field name="model_id" ref="model_mail_mass_mailing_contact"/>
+    <field name="name">+050 to Score</field>
+    <field name="sequence">5</field>
+    <field name="state">code</field>
+  </record>
+  <record id="tcrm_mass_mailing_contact_score.add_to_score_100" model="ir.actions.server">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="child_ids" eval="[(6, 0, [])]"/>
+    <field name="code"><![CDATA[# Available variables:
+model.add_score(env, model, record, log, 100) 
+]]>    </field>
+    <field name="crud_model_id" eval="False"/>
+    <field name="help" eval="False"/>
+    <field name="link_field_id" eval="False"/>
+    <field name="model_id" ref="model_mail_mass_mailing_contact"/>
+    <field name="name">+100 to Score</field>
+    <field name="sequence">5</field>
+    <field name="state">code</field>
+  </record>
+
+  <record id="tcrm_mass_mailing_contact_score.add_to_score_n1" model="ir.actions.server">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="child_ids" eval="[(6, 0, [])]"/>
+    <field name="code"><![CDATA[# Available variables:
+model.add_score(env, model, record, log, -1) 
+]]>    </field>
+    <field name="crud_model_id" eval="False"/>
+    <field name="help" eval="False"/>
+    <field name="link_field_id" eval="False"/>
+    <field name="model_id" ref="model_mail_mass_mailing_contact"/>
+    <field name="name">-001 to Score</field>
+    <field name="sequence">5</field>
+    <field name="state">code</field>
+  </record>
+  <record id="tcrm_mass_mailing_contact_score.add_to_score_n5" model="ir.actions.server">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="child_ids" eval="[(6, 0, [])]"/>
+    <field name="code"><![CDATA[# Available variables:
+model.add_score(env, model, record, log, -5) 
+]]>    </field>
+    <field name="crud_model_id" eval="False"/>
+    <field name="help" eval="False"/>
+    <field name="link_field_id" eval="False"/>
+    <field name="model_id" ref="model_mail_mass_mailing_contact"/>
+    <field name="name">-005 to Score</field>
+    <field name="sequence">5</field>
+    <field name="state">code</field>
+  </record>
+  <record id="tcrm_mass_mailing_contact_score.add_to_score_n10" model="ir.actions.server">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="child_ids" eval="[(6, 0, [])]"/>
+    <field name="code"><![CDATA[# Available variables:
+model.add_score(env, model, record, log, -10) 
+]]>    </field>
+    <field name="crud_model_id" eval="False"/>
+    <field name="help" eval="False"/>
+    <field name="link_field_id" eval="False"/>
+    <field name="model_id" ref="model_mail_mass_mailing_contact"/>
+    <field name="name">-010 to Score</field>
+    <field name="sequence">5</field>
+    <field name="state">code</field>
+  </record>
+  <record id="tcrm_mass_mailing_contact_score.add_to_score_n50" model="ir.actions.server">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="child_ids" eval="[(6, 0, [])]"/>
+    <field name="code"><![CDATA[# Available variables:
+model.add_score(env, model, record, log, -50) 
+]]>    </field>
+    <field name="crud_model_id" eval="False"/>
+    <field name="help" eval="False"/>
+    <field name="link_field_id" eval="False"/>
+    <field name="model_id" ref="model_mail_mass_mailing_contact"/>
+    <field name="name">-050 to Score</field>
+    <field name="sequence">5</field>
+    <field name="state">code</field>
+  </record>
+  <record id="tcrm_mass_mailing_contact_score.add_to_score_n100" model="ir.actions.server">
+    <field name="binding_model_id" eval="False"/>
+    <field name="binding_type">action</field>
+    <field name="child_ids" eval="[(6, 0, [])]"/>
+    <field name="code"><![CDATA[# Available variables:
+model.add_score(env, model, record, log, -100) 
+]]>    </field>
+    <field name="crud_model_id" eval="False"/>
+    <field name="help" eval="False"/>
+    <field name="link_field_id" eval="False"/>
+    <field name="model_id" ref="model_mail_mass_mailing_contact"/>
+    <field name="name">-100 to Score</field>
+    <field name="sequence">5</field>
+    <field name="state">code</field>
+  </record>
+</odoo>
