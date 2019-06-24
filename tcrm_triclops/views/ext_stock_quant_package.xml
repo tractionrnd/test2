@@ -6,7 +6,7 @@
             <field name="inherit_id" ref="stock.view_quant_package_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//button[@name='unpack']" position="after">
-                    <button name="get_wieght" string="Get Wieght" type="object"/>
+                    <button name="get_weight" string="Get Weight" type="object"/>
                 </xpath>
             </field>
             <field name="mode">extension</field>
