@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <data>
-    <record id="tcrm_triclops.ext_ext_stock_picking_extend" model="ir.ui.view">
-      <field name="name">stock.picking.form.mark_all_done</field>
-      <field name="model">sale.order</field>
-      <field name="inherit_id" ref="stock.view_picking_form"/>
-      <field name="arch" type="xml">
-        <xpath expr="//button[@name='action_toggle_is_locked']" position="after">
-          <button name="mark_all_done" string="Mark All Done" type="object"/>
-        </xpath>
-      </field>
-    </record>
-  </data>
+    <data>
+        <record id="tcrm_triclops.ext_ext_stock_picking_extend" model="ir.ui.view">
+            <field name="name">stock.picking.form.mark_all_done</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_toggle_is_locked']" position="after">
+                    <button name="mark_all_done" string="Mark All Done" type="object"/>
+                </xpath>
+            </field>
+            <field name="mode">extension</field>
+            <field name="model">stock.picking</field>
+        </record>
+    </data>
 </odoo>
