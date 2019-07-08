@@ -10,7 +10,7 @@ class ExtStockQuantPackage(models.Model):
     @api.multi
     def get_weight(self):
 
-        webserverUrl = self.env['ir.config_parameter'].sudo().get_param('tcrm_triclops.x_tricolops_webserverl') or 'http://localhost:8080/data'
+        webserverUrl = self.env['ir.config_parameter'].sudo().get_param('tcrm_tricolops.x_tricolops_webserverl') or 'http://localhost:8080/data'
         response = requests.get(webserverUrl)
 
         if response.status_code == 200:

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="tcrm_triclops.ext_ext_stock_picking_extend" model="ir.ui.view">
+        <record id="tcrm_tricolops.ext_ext_stock_picking_extend" model="ir.ui.view">
             <field name="name">stock.picking.form.mark_all_done</field>
             <field name="inherit_id" ref="stock.view_picking_form"/>
             <field name="arch" type="xml">

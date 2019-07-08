@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="tcrm_triclops.res_config_settings_tricolops" model="ir.ui.view">
+    <record id="tcrm_tricolops.res_config_settings_tricolops" model="ir.ui.view">
         <field name="name">res.config.settings.view.form.inherit.tricolops.setup</field>
         <field name="model">res.config.settings</field>
         <field name="priority" eval="100"/>
         <field name="inherit_id" ref="base.res_config_settings_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('settings')]" position="inside">
-                <div class="app_settings_block" data-string="Tricolops" string="Tricolops" data-key="tcrm_triclops">
+                <div class="app_settings_block" data-string="Tricolops" string="Tricolops" data-key="tcrm_tricolops">
                     <div id="tcrm_Tricolops_config_integration">
                         <h2>Tricolops Integration</h2>
 

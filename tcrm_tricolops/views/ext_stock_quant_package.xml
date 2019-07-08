@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="tcrm_triclops.ext_stock_quant_package_extend" model="ir.ui.view">
+        <record id="tcrm_tricolops.ext_stock_quant_package_extend" model="ir.ui.view">
             <field name="name">stock.quant.package.form.get_weight</field>
             <field name="inherit_id" ref="stock.view_quant_package_form"/>
             <field name="arch" type="xml">

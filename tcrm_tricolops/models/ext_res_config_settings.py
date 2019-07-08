@@ -9,11 +9,11 @@ class ExtResConfigSettings(models.TransientModel):
     def get_values(self):
         res = super(ExtResConfigSettings, self).get_values()
         res.update(
-            x_tricolops_webserverl = self.env['ir.config_parameter'].sudo().get_param('tcrm_triclops.x_tricolops_webserverl') or 'http://localhost:8080/data'
+            x_tricolops_webserverl = self.env['ir.config_parameter'].sudo().get_param('tcrm_tricolops.x_tricolops_webserverl') or 'http://localhost:8080/data'
         )
         return res
 
     @api.multi
     def set_values(self):
         super(ExtResConfigSettings, self).set_values()
-        self.env['ir.config_parameter'].sudo().set_param('tcrm_triclops.x_tricolops_webserverl', self.x_tricolops_webserverl)
+        self.env['ir.config_parameter'].sudo().set_param('tcrm_tricolops.x_tricolops_webserverl', self.x_tricolops_webserverl)

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Traction - Triclops Integration",
+    'name': "Traction - Tricolops Integration",
 
     'summary': "",
 
